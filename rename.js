@@ -14,9 +14,6 @@
  * [in=quan] 识别英文全称
 
  *
- * [out=]   输出节点名可选参数: (cn或zh ，us或en ，gq或flag ，quan) 对应：(中文，英文缩写 ，国旗 ，英文全称) 默认中文 例如 [out=en] 或 out=us 输出英文缩写
- *** 分隔符参数
- *
  * [fgf=]   节点名前缀或国旗分隔符，默认为空格；
  * [sn=]    设置国家与序号之间的分隔符，默认为空格；
  * 序号参数
@@ -26,6 +23,17 @@
  *** 前缀参数
  * [name=]  节点添加机场名称前缀；
  * [nf]     把 name= 的前缀值放在最前面
+ *** 保留参数
+ * [blkey=iplc+gpt+NF+IPLC] 用+号添加多个关键词 保留节点名的自定义字段 需要区分大小写!
+ * 如果需要修改 保留的关键词 替换成别的 可以用 > 分割 例如 [#blkey=GPT>新名字+其他关键词] 这将把【GPT】替换成【新名字】
+ * 例如      https://raw.githubusercontent.com/Keywos/rule/main/rename.js#flag&blkey=GPT>新名字+NF
+ * [blgd]   保留: 家宽 IPLC ˣ² 等
+ * [bl]     正则匹配保留 [0.1x, x0.2, 6x ,3倍]等标识
+ * [nx]     保留1倍率与不显示倍率的
+ * [blnx]   只保留高倍率
+ * [clear]  清理乱名
+ * [blpx]   如果用了上面的bl参数,对保留标识后的名称分组排序,如果没用上面的bl参数单独使用blpx则不起任何作用
+ * [blockquic] blockquic=on 阻止; blockquic=off 不阻止
  */
 
 // const inArg = {'blkey':'iplc+GPT>GPTnewName+NF+IPLC', 'flag':true };
