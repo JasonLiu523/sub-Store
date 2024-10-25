@@ -50,7 +50,6 @@ const nx = inArg.nx || false,
   blnx = inArg.blnx || false,
   numone = inArg.one || false,
   debug = inArg.debug || false,
-  clear = inArg.clear || false,
   addflag = inArg.flag || false,
   nm = inArg.nm || false;
 
