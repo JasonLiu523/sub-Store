@@ -155,18 +155,6 @@ function operator(pro) {
     });
   });
 
-  if (clear || nx || blnx || key) {
-    pro = pro.filter((res) => {
-      const resname = res.name;
-      const shouldKeep =
-        !(clear && nameclear.test(resname)) &&
-        !(nx && namenx.test(resname)) &&
-        !(blnx && !nameblnx.test(resname)) &&
-        !(key && !(keya.test(resname) && /2|4|6|7/i.test(resname)));
-      return shouldKeep;
-    });
-  }
-
   const BLKEYS = BLKEY ? BLKEY.split("+") : "";
 
   pro.forEach((e) => {
